@@ -1,0 +1,31 @@
+package work.beltran.rentaboat
+
+import android.content.Context
+import android.net.Uri
+import android.os.Bundle
+import android.support.v4.app.Fragment
+import android.support.v4.app.NavUtils
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
+import android.widget.Button
+import androidx.navigation.Navigation
+
+
+class WelcomeFragment : Fragment() {
+
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
+                              savedInstanceState: Bundle?): View? {
+        val view = inflater.inflate(R.layout.fragment_welcome, container, false)
+
+        view.findViewById<Button>(R.id.button_login).setOnClickListener(
+                Navigation.createNavigateOnClickListener(R.id.action_welcomeFragment_to_homeFragment)
+        )
+
+        view.findViewById<Button>(R.id.button_registration).setOnClickListener(
+                Navigation.createNavigateOnClickListener(R.id.action_welcomeFragment_to_registrationFragment)
+        )
+
+        return view
+    }
+}
