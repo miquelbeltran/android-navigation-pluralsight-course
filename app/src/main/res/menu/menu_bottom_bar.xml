@@ -4,8 +4,10 @@
 
     <item
         android:id="@+id/feedFragment"
+        android:icon="@drawable/ic_directions_boat_black_24dp"
         android:title="Feed" />
     <item
         android:id="@+id/ordersFragment"
+        android:icon="@drawable/ic_inbox_black_24dp"
         android:title="Orders" />
 </menu>

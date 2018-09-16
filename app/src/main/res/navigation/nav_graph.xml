@@ -24,10 +24,19 @@
         android:id="@+id/homeFragment"
         android:name="work.beltran.rentaboat.HomeFragment"
         android:label="fragment_home"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_boatFragment"
+            app:destination="@id/boatFragment" />
+    </fragment>
     <fragment
         android:id="@+id/registrationFragment"
         android:name="work.beltran.rentaboat.RegistrationFragment"
         android:label="fragment_registration"
         tools:layout="@layout/fragment_registration" />
+    <fragment
+        android:id="@+id/boatFragment"
+        android:name="work.beltran.rentaboat.BoatFragment"
+        android:label="fragment_boat"
+        tools:layout="@layout/fragment_boat" />
 </navigation>
