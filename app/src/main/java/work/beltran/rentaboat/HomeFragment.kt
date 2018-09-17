@@ -10,15 +10,8 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.NavController
 import androidx.navigation.NavDestination
-import androidx.navigation.findNavController
 import androidx.navigation.fragment.NavHostFragment
-import androidx.navigation.fragment.findNavController
-import androidx.navigation.ui.NavigationUI
 import androidx.navigation.ui.setupWithNavController
-import kotlinx.android.synthetic.main.fragment_home.*
-import kotlinx.android.synthetic.main.fragment_home.view.*
-import work.beltran.rentaboat.R.id.toolbar
-
 
 
 /**
@@ -43,15 +36,12 @@ class HomeFragment : Fragment() {
         val toolbar = view.findViewById<Toolbar>(R.id.toolbar)
 
         // Custom navigation listener allows me to change the title
-        navHostFragment.navController.addOnNavigatedListener(CustomNavigatedListener(toolbar))
+        navHostFragment.navController.addOnNavigatedListener { _, destination ->
+            toolbar.title = destination.label
+        }
 
         return view
     }
 
-    class CustomNavigatedListener(val toolbar: Toolbar) : NavController.OnNavigatedListener {
-        override fun onNavigated(controller: NavController, destination: NavDestination) {
-            toolbar.title = destination.label
-        }
-    }
 
 }
