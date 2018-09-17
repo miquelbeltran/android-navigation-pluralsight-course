@@ -24,7 +24,10 @@ class FeedFragment : Fragment() {
     }
 
     private fun onBoatClick(boatId: Int) {
-        activity?.findNavController(R.id.nav_container)?.navigate(R.id.action_homeFragment_to_boatFragment)
+        val bundle = Bundle().apply {
+            putInt("id", boatId)
+        }
+        activity?.findNavController(R.id.nav_container)?.navigate(R.id.action_homeFragment_to_boatFragment, bundle)
     }
 
 }

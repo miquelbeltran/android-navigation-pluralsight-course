@@ -38,5 +38,6 @@
         android:id="@+id/boatFragment"
         android:name="work.beltran.rentaboat.BoatFragment"
         android:label="fragment_boat"
-        tools:layout="@layout/fragment_boat" />
+        tools:layout="@layout/fragment_boat" >
+    </fragment>
 </navigation>

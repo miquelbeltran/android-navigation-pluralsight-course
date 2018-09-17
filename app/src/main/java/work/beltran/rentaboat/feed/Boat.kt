@@ -36,3 +36,4 @@ val BOATS = listOf(
         )
 )
 
+fun List<Boat>.getBoat(id: Int) = find { it.id == id } ?: error("Boat Not Found")

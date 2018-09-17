@@ -6,24 +6,25 @@ import android.support.v4.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import kotlinx.android.synthetic.main.fragment_boat.view.*
+import work.beltran.rentaboat.feed.BOATS
+import work.beltran.rentaboat.feed.getBoat
 
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
-
-/**
- * A simple [Fragment] subclass.
- *
- */
 class BoatFragment : Fragment() {
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_boat, container, false)
+
+        val id = arguments?.getInt("id") ?: error("Argument not found")
+
+        val boat = BOATS.getBoat(id)
+
+        val view = inflater.inflate(R.layout.fragment_boat, container, false)
+        view.nameTextView.text = boat.name
+        view.locationTextView.text = boat.location
+        view.imageView2.setImageResource(boat.picture)
+        view.priceTextView.text = boat.price
+        return view
     }
-
-
 }
