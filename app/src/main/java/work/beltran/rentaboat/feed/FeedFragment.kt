@@ -9,6 +9,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.findNavController
 import kotlinx.android.synthetic.main.fragment_feed.view.*
+import work.beltran.rentaboat.HomeFragmentDirections
 import work.beltran.rentaboat.R
 
 
@@ -24,10 +25,8 @@ class FeedFragment : Fragment() {
     }
 
     private fun onBoatClick(boatId: Int) {
-        val bundle = Bundle().apply {
-            putInt("id", boatId)
-        }
-        activity?.findNavController(R.id.nav_container)?.navigate(R.id.action_homeFragment_to_boatFragment, bundle)
+        val action = HomeFragmentDirections.actionHomeFragmentToBoatFragment(boatId)
+        activity?.findNavController(R.id.nav_container)?.navigate(action)
     }
 
 }
