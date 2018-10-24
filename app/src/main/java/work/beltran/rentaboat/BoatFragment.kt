@@ -16,9 +16,17 @@ class BoatFragment : Fragment() {
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
 
+        // Unsafe arguments
 //        val id = arguments?.getInt("id") ?: error("Argument not found")
 
-        val id = BoatFragmentArgs.fromBundle(arguments).id
+        // Safe arguments
+//        val id = BoatFragmentArgs.fromBundle(arguments).id
+
+        // From URL
+        val id = arguments?.getString("id_dl")?.toInt()
+                // If not, from Safe Arguments
+                ?: BoatFragmentArgs.fromBundle(arguments).id
+
 
         val boat = BOATS.getBoat(id)
 

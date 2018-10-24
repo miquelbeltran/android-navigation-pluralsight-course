@@ -13,25 +13,25 @@ class Boat(
 val BOATS = listOf(
         Boat(
                 id = 1,
-                name = "Canoa Larga",
+                name = "Canoe",
                 location = "Tenerife",
-                picture = R.drawable.boat_1,
+                picture = R.drawable.speed_boat_blue,
                 price = "45 EUR"
 
         ),
         Boat(
                 id = 2,
-                name = "Lancha Motora",
+                name = "Sailboat",
                 location = "Costa Brava",
-                picture = R.drawable.boat_2,
+                picture = R.drawable.speed_boat_blue,
                 price = "99 EUR"
 
         ),
         Boat(
                 id = 3,
-                name = "Velero",
+                name = "Kayak",
                 location = "Mallorca",
-                picture = R.drawable.boat_3,
+                picture = R.drawable.speed_boat_blue,
                 price = "120 EUR"
         )
 )

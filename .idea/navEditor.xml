@@ -84,26 +84,6 @@
             </LayoutPositions>
           </value>
         </entry>
-        <entry key="nav_graph_home.xml">
-          <value>
-            <LayoutPositions>
-              <option name="myPositions">
-                <map>
-                  <entry key="feedFragment">
-                    <value>
-                      <LayoutPositions />
-                    </value>
-                  </entry>
-                  <entry key="ordersFragment">
-                    <value>
-                      <LayoutPositions />
-                    </value>
-                  </entry>
-                </map>
-              </option>
-            </LayoutPositions>
-          </value>
-        </entry>
       </map>
     </option>
   </component>

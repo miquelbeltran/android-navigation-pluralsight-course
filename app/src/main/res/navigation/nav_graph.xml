@@ -13,11 +13,16 @@
         <action
             android:id="@+id/action_welcomeFragment_to_homeFragment"
             app:destination="@id/homeFragment"
+            app:launchSingleTop="true"
             app:popUpTo="@+id/welcomeFragment"
             app:popUpToInclusive="true" />
         <action
             android:id="@+id/action_welcomeFragment_to_registrationFragment"
-            app:destination="@id/registrationFragment"
+            app:destination="@+id/registrationFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim"
             app:popUpTo="@+id/welcomeFragment" />
     </fragment>
     <fragment
@@ -32,7 +37,7 @@
     <fragment
         android:id="@+id/registrationFragment"
         android:name="work.beltran.rentaboat.RegistrationFragment"
-        android:label="fragment_registration"
+        android:label="Register New Account"
         tools:layout="@layout/fragment_registration" />
     <fragment
         android:id="@+id/boatFragment"
@@ -42,5 +47,7 @@
         <argument
             android:name="id"
             app:argType="integer" />
+        <deepLink app:uri="https://www.example.com/boat/{id_dl}"/>
+        <deepLink app:uri="rentaboat://boat/{id_dl}"/>
     </fragment>
 </navigation>

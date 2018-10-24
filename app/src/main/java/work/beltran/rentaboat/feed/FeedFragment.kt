@@ -7,6 +7,7 @@ import android.support.v7.widget.LinearLayoutManager
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.NavDirections
 import androidx.navigation.findNavController
 import kotlinx.android.synthetic.main.fragment_feed.view.*
 import work.beltran.rentaboat.HomeFragmentDirections
@@ -25,6 +26,11 @@ class FeedFragment : Fragment() {
     }
 
     private fun onBoatClick(boatId: Int) {
+
+//        val args = Bundle()
+//        args.putInt("id", boatId)
+//        activity?.findNavController(R.id.nav_container)?.navigate(R.id.boatFragment, args)
+
         val action = HomeFragmentDirections.actionHomeFragmentToBoatFragment(boatId)
         activity?.findNavController(R.id.nav_container)?.navigate(action)
     }
