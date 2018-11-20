@@ -10,6 +10,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.NavController
 import androidx.navigation.NavDestination
+import androidx.navigation.NavGraphBuilder
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.setupWithNavController
 
@@ -39,6 +40,7 @@ class HomeFragment : Fragment() {
         navHostFragment.navController.addOnNavigatedListener { _, destination ->
             toolbar.title = destination.label
         }
+
 
         return view
     }
