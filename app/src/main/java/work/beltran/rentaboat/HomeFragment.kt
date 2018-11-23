@@ -14,11 +14,6 @@ import androidx.navigation.NavGraphBuilder
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.setupWithNavController
 
-
-/**
- * A simple [Fragment] subclass.
- *
- */
 class HomeFragment : Fragment() {
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
@@ -30,17 +25,12 @@ class HomeFragment : Fragment() {
         view.findViewById<BottomNavigationView>(R.id.bottomNavigationView)
                 .setupWithNavController(navHostFragment.navController)
 
-        // I don't like the Up navigation arrows
-//        view.findViewById<Toolbar>(R.id.toolbar)
-//                .setupWithNavController(navHostFragment.navController)
-
         val toolbar = view.findViewById<Toolbar>(R.id.toolbar)
 
         // Custom navigation listener allows me to change the title
         navHostFragment.navController.addOnNavigatedListener { _, destination ->
             toolbar.title = destination.label
         }
-
 
         return view
     }

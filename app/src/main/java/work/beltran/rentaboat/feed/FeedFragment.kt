@@ -16,7 +16,6 @@ import work.beltran.rentaboat.R
 
 class FeedFragment : Fragment() {
 
-
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
         val view = inflater.inflate(R.layout.fragment_feed, container, false)
@@ -26,14 +25,8 @@ class FeedFragment : Fragment() {
     }
 
     private fun onBoatClick(boatId: Int) {
-
-//        val args = Bundle()
-//        args.putInt("id", boatId)
-//        activity?.findNavController(R.id.nav_container)?.navigate(R.id.boatFragment, args)
-
         val action = HomeFragmentDirections.actionHomeFragmentToBoatFragment(boatId)
         activity?.findNavController(R.id.nav_container)?.navigate(action)
     }
-
 }
 
