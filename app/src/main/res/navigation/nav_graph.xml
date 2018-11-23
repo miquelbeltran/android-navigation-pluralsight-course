@@ -46,6 +46,6 @@
         tools:layout="@layout/fragment_boat" >
         <argument
             android:name="id"
-            app:argType="integer" /><deepLink app:uri="https://www.example.com/boat/{id_dl}"/><deepLink app:uri="rentaboat://boat/{id_dl}"/>
+            app:argType="integer" />
     </fragment>
 </navigation>
