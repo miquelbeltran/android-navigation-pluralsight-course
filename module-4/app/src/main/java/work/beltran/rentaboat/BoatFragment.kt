@@ -16,7 +16,7 @@ class BoatFragment : Fragment() {
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
 
-        val id = BoatFragmentArgs.fromBundle(arguments).id
+        val id = BoatFragmentArgs.fromBundle(arguments!!).id
 
         val boat = BOATS.getBoat(id)
 

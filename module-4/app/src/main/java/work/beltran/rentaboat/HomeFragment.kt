@@ -28,7 +28,7 @@ class HomeFragment : Fragment() {
         val toolbar = view.findViewById<Toolbar>(R.id.toolbar)
 
         // Custom navigation listener allows me to change the title
-        navHostFragment.navController.addOnNavigatedListener { _, destination ->
+        navHostFragment.navController.addOnDestinationChangedListener { _, destination, _ ->
             toolbar.title = destination.label
         }
 
